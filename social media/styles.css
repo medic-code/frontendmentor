@@ -1,0 +1,118 @@
+:root {
+    --clr-green: 75, 94%, 57%;
+    --clr-white: 0, 0%, 100%;
+    --clr-grey: 0,0%, 20%;
+    --clr-offblack: 0, 0%, 8%;
+    
+    --fs-body: 0.875rem;
+    --fs-heading: 1.5rem;
+    --fw-bold:600;
+    
+    --padding-small: 0.75rem;
+    --padding-medium: 1.5rem;
+    --padding-large: 2.5rem;
+    --padding-inline: 5.875rem;
+    
+    --border-radius-small: 0.5rem;
+    --border-radius-large: 1rem;
+}
+
+*::after,
+*::before, 
+* {
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, img, div, span, a, button {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    background-color: hsl(0,0%,10%);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(var(--clr-white));
+    margin: 0;
+}
+
+img {
+    object-fit:cover;
+    border-radius: 50%;
+    width: 88px;
+    height: auto; max-width: 100%; }
+
+.card {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; 
+    background-color: hsl(var(--clr-offblack));
+    border-radius: var(--border-radius-large);
+    width: 100%;
+    max-width: 327px;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.full-name {
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-bold);
+}
+
+.location {
+    color: hsl(var(--clr-green));
+    font-size: var(--fs-body);
+    font-weight: var(--fw-bold);
+}
+
+.subtitle {
+    font-size: var(--fs-body);
+    white-space: nowrap;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: var(--border-radius-small);
+    background-color: hsl(var(--clr-grey));
+    color: hsl(var(--clr-white));
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-body);
+    white-space: nowrap;
+    padding: var(--padding-small) var(--padding-inline);
+    width: 100%;
+    max-width: 327px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover, button:focus {
+    background-color: hsl(var(--clr-green));
+    color: hsl(var(--clr-grey));
+    outline: none;
+    box-shadow: 0 0 0 0.1875rem rgba(255,255,255,0.75);
+}
+
+@media screen and (min-width: 376px) {
+    .card {
+        padding:var(--padding-large); 
+    }
+}
