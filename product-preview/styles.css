@@ -101,7 +101,7 @@ main {
 }
 
 .product-card__category {
-    letter-spacing: var(--border-radius-mobile);
+    letter-spacing: calc(var(--border-radius-mobile)*0.5);
     text-transform: uppercase;
     font-size: var(--fs-small-body);
 }
