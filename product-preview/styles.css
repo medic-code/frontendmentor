@@ -175,6 +175,10 @@ main {
     border-bottom-left-radius: var(--border-radius-desktop);
   }
 
+  .product-card__button {
+    padding-inline: calc(var(--space-text-desktop-large)*2);
+  }
+
   .product-card__button:hover {
     background-color: hsl(var(--color-hover));
   }
