@@ -164,6 +164,8 @@ main {
     max-width: 18.75rem;
     width: 100%;
     height: 28.1rem;
+    border-bottom-right-radius: var(--border-radius-desktop);
+    border-top-right-radius: var(--border-radius-desktop);
   }
   
   .product-card__image {
