@@ -118,6 +118,10 @@ main {
     color: hsl(var(--color-neutral-darkblue));
 }
 
+.product-card__description {
+    font-weight: 500;
+}
+
 .product-card__price {
     font-family: var(--ff-fraunces);
     font-weight: var(--fw-heading);
