@@ -133,7 +133,7 @@ main {
 
 .product-card__price--original {
     text-decoration: line-through;
-    font-weight: var(--fw-heading);
+    font-weight: 400;
 }
 
 .product-card__button {
