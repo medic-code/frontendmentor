@@ -82,6 +82,7 @@ h1, h3 {
     font-size: var(--fs-cardheading);
     font-weight: var(--fw-cardheading);
     color: var(--colour-neut-darkblue); 
+    margin-bottom: var(--border-radius-mobile);
 }
 
 .feature-card:nth-of-type(1) {
@@ -171,6 +172,7 @@ h1, h3 {
         grid-row: 2/3;
         justify-items: center;
         display: grid;
+        gap: var( --space-paddinginline-cont); 
         grid-template-columns: repeat(3,minmax(0,21.875rem));
         grid-template-rows: 1fr 1fr;
     }
@@ -178,6 +180,10 @@ h1, h3 {
     .feature-card {
         max-width: 21.875rem;
         width: 100%;
+    }
+    
+    .feature-card__image {
+        margin-top: var(--fs-heading-desktop);
     }
 
     .feature-card:nth-of-type(1) {
