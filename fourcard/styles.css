@@ -55,10 +55,6 @@ body {
     background-color: hsl(var(--colour-neut-lightgray));
 }
 
-h1, h3 {
-    line-height: 1.1;
-}
-
 .container {
     padding: var(--space-paddingvert-cont) var(--space-paddinginline-cont);
 }
