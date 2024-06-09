@@ -19,7 +19,7 @@
 
     --fw-heading: 600;
     --fw-cardheading: 600;
-    --fw-body: 300;
+    --fw-body: 150;
 
 
     --ff-poppin: "Poppins", sans-serif;
@@ -179,7 +179,7 @@ body {
     }
     
     .feature-card__image {
-        margin-top: var(--fs-heading-desktop);
+        margin-top: 2.5rem;
     }
 
     .feature-card:nth-of-type(1) {
