@@ -1,0 +1,209 @@
+/* CUSTOM PROPERTIES */
+
+:root {
+    /* Primary Colors */
+    --color-moderate-violet: hsl(263, 82%, 70%);
+    --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --color-very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-dark-purple: hsl(263,55%,52%);
+
+    /* Neutral Colors */
+    --color-light-gray: hsl(0, 0%, 81%);
+    --color-light-grayish-blue: hsl(210, 46%, 95%);
+  
+    /* Text Colors */
+    --color-verified-graduate: hsla(217, 19%, 35%, 0.5); /* Same as person's name with 50% opacity */
+    --color-review-paragraph: hsla(217, 19%, 35%, 0.7); /* Same as person's name with 70% opacity */
+  
+    /* Typography */
+    --font-size-body: 0.8125rem;
+    --font-size-title: 0.6875rem;
+    --font-size-quote: 1.25rem;
+
+  
+    /* Font Family */
+    --font-family-barlow: 'Barlow Semi Condensed', sans-serif;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+
+    --border-radius: 0.5rem;
+
+    /* Spacing */
+    --space-name-subtitle: 0.25rem;
+    --space-image-title: 1rem;
+    --space-quote-speech: 2.5rem;
+    --space-quote-speech-large: 1.5rem;
+
+    /* padding */
+    --padding-card: 2rem;
+    --padding-vertical: 1.625rem;
+    
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+  
+* {
+    margin: 0;
+    padding: 0
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-size: var(--font-size-body);
+    font-family: var(--font-family-barlow);
+    background-color: var(--color-light-grayish-blue);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%;
+}
+
+.testimonial-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-quote-speech-large);
+    padding: var(--space-quote-speech); 
+}
+
+.testimonial-card {
+    border-radius: var(--border-radius);
+    padding-inline: var(--padding-card);
+    padding-top: var(--padding-vertical);
+    padding-bottom: var(--padding-vertical);
+}
+
+.testimonial-card__image--purple {
+    background-color: var(--color-dark-purple);
+    position: relative;
+}
+
+.testimonial-card--gray {
+    background-color: var(--color-very-dark-grayish-blue);
+}
+
+.testimonial-card--white {
+    background-color: var(--color-white);
+}
+
+.testimonial-card--dark {
+    background-color: var(--color-very-dark-blackish-blue);
+}
+
+.card-details {
+    display: flex;
+    gap: var(--space-image-title);
+}
+
+.testimonial-card__image {
+    border-radius: 50%;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.testimonial-card__image--purple{
+    border: 2px solid var(--color-moderate-violet);
+}
+
+.testimonial-card__quote {
+    margin: var(--space-image-title) 0;
+    font-size: var(--font-size-quote);
+    font-weight: var(--font-weight-500);
+    position: relative;
+    z-index: 2
+}
+
+.testimonial-card__title {
+    color: var(--color-light-gray);
+}
+
+.testimonial-card__name {
+    color: var(--color-white);
+}
+
+.testimonial-card__name--dark {
+    color: var(--color-very-dark-grayish-blue);
+}
+
+.testimonial-card__quote-img {
+    position: absolute;
+    top: 5px;
+    right: 102px;
+    z-index: 1;
+}
+
+.testimonial-card__speech--lightgrey {
+    color: var(--color-light-gray);
+}
+
+.testimonial-card__quote--margin {
+    margin-bottom: var(--space-quote-speech-large);
+}
+
+.testimonial-card__speech--dark {
+    color: var(--color-review-paragraph);
+}
+
+.testimonial-card__quote--white {
+    color: var(--color-white);
+}
+
+.testimonial-card__speech {
+    line-height: 1.4;
+}
+
+@media (min-width: 501px) {
+    .testimonial-cards {
+        display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2,1fr);
+    }
+  }
+
+
+@media screen and (min-width: 1110px) {
+    .testimonial-cards {
+        display: grid;
+        grid-template-columns: minmax(auto,16.875rem) 1fr  minmax(auto,15.935rem) minmax(auto,15.935rem);
+        grid-template-rows: minmax(auto,17.625rem) minmax(auto,16.625rem);
+        column-gap: 1.875rem;
+    }
+
+    .testimonial-card:nth-of-type(1) {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        max-width: 36.75rem;
+    }
+
+    .testimonial-card:nth-of-type(2) {
+        grid-column: 3/4;
+    }
+
+    .testimonial-card:nth-of-type(3) {
+        grid-row: 2/3;
+    }
+
+    .testimonial-card:nth-of-type(4) {
+        grid-column: 2/4;
+        grid-row:2/3;
+        max-width: 35.75rem;
+    }
+    .testimonial-card:nth-of-type(5) {
+        grid-column: 4/5;
+        grid-row: 1/3;
+        max-height: 35.75rem;
+    }
+}
+
