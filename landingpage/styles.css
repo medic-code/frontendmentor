@@ -13,7 +13,8 @@
 
     --ff: 'Red Hat Display',sans-serif;
 
-    --fw-heading: 650;
+    --fw-heading: 700;
+
     --fw-h2: 500;
 
     --fs-heading: 4rem;
@@ -77,6 +78,7 @@ img {
     flex-wrap: wrap;
     overflow: hidden;
     min-width: 26rem;
+    margin-bottom: 3rem;
 }
 .hero__image,.hero__image2 {
         flex: 1 1 33%;
@@ -206,7 +208,7 @@ img {
 
 .features__description {
     color: hsl(var(--color-lightgrey));
-    line-height: 1.8;
+    line-height: 2;
 }
 
 .footer {
@@ -294,6 +296,7 @@ footer::before{
     .hero {
         flex-direction: row;
         flex-wrap:wrap;
+        margin-bottom: 4rem;
     }
 
     .hero__image, 
@@ -328,7 +331,7 @@ footer::before{
 
     .hero__image, 
     .hero__image2 {
-        max-width: 20rem;
+        max-width: 24rem;
         margin-bottom:1rem;
     }
 
