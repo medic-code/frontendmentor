@@ -315,6 +315,9 @@ footer::before{
 }
 
 @media screen and (min-width: 1200px) {
+    .header {
+        margin-top: 5rem;
+    }
     .hero {
         flex-direction: row;
         gap: 5.5rem;
