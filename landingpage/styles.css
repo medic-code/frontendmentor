@@ -13,7 +13,7 @@
 
     --ff: 'Red Hat Display',sans-serif;
 
-    --fw-heading: 600;
+    --fw-heading: 650;
     --fw-h2: 500;
 
     --fs-heading: 4rem;
@@ -99,8 +99,6 @@ img {
     align-items: center;
     text-align: center;
     padding-inline: var(--padding-mobile);
-    margin-top: 3rem;
-    margin-bottom: 4rem;
     min-width: 20rem;
 }
 
@@ -221,7 +219,6 @@ img {
     background-size: cover;
     margin-top: 10rem;
     z-index: 1;
-  
 }
 
 footer::before{
@@ -286,6 +283,10 @@ footer::before{
         max-width: 28.5rem;
     }
 
+    .hero__details {
+        margin-top: 4.375rem;
+    }
+
     .hero__buttons {
         flex-direction: row;
     }
@@ -322,11 +323,13 @@ footer::before{
         flex-direction: row;
         gap: 5.5rem;
         flex-wrap: nowrap;
+        margin-bottom: 6.875rem;
     }
 
     .hero__image, 
     .hero__image2 {
-        max-width: 24.625rem;
+        max-width: 20rem;
+        margin-bottom:1rem;
     }
 
     .hero__details {
@@ -345,9 +348,11 @@ footer::before{
     
     .hero__title {
         font-size: var(--fs-heading);
+        font-weight:var(--fw-heading);
         line-height: 1;
         width: 100%;
         max-width: 27.8rem;
+        margin-bottom: 2.125rem;
     }
 
     .footer__button:active, 
