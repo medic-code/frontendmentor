@@ -1,0 +1,220 @@
+:root {
+    --colour-darkgray: hsl(217,19%, 35%);
+    --colour-darkblue: hsl(214,17%, 51%);
+    --colour-blue: hsl(212,23%, 69%);
+    --colour-lightblue: hsl(210,46%, 95%);
+    --colour-white: hsl(0,0%,100%);
+    --colour-boxshadow: hsl(210, 29%, 84%);
+    
+    --fs-body: 0.8125rem;
+    --fs-heading: 1.25rem;
+    --fs-mobile-heading: 1rem;
+
+    --fw-body: 500;
+    --fw-title: 700;
+
+    --border-radius: 0.625rem;
+
+    --spacing: 2rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--fs-body);
+    line-height: 1.5;
+    --webkit-font-smoothing: antialiased;
+    background-color: var(--colour-lightblue);
+    width: 100vw;
+    height: 100vh;
+}
+
+h3 {
+    line-height: 1.5rem;
+    letter-spacing: 0.0125rem;
+}
+
+p {
+    line-height: 1.25rem;
+    letter-spacing: 0.0075rem;
+}
+
+p, h3 {
+    overflow-wrap: break-word;
+}
+
+main, body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-preview {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 40px 40px -10px var(--colour-boxshadow);
+  
+}
+
+.article-preview__img {
+    max-width: 20.4375rem;
+    width: 100%;
+    max-height: 12.5rem; 
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.article-info {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colour-white);
+    padding: 2.25rem var(--spacing) 1.25rem var(--spacing);
+    max-width: 20.4375rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.article-info__title {
+    margin-bottom: 0.75rem;
+    font-size: var(--fs-mobile-heading);
+}
+
+
+.article-info__title, .author-details__name {
+    color: var(--colour-darkgray);
+}
+
+.article-info__description {
+    color: var(--colour-darkblue);
+}
+
+.article-author {
+    display: flex;
+    align-items: center;
+    margin-top: var(--spacing);
+    
+}
+
+.article-author__img {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+}
+
+.article-details__name {
+    font-weight: var(--fw-body);
+}
+
+.author-details__name {
+    white-space: nowrap;
+}
+.author-details__date {
+    color: var(--colour-blue);
+}
+
+.article-author__sharingicon {
+    background-color: var(--colour-lightblue);
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin-left: auto;
+    width: 32px;
+}
+
+.share-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    right: -65px;
+    bottom: 85px;  
+}
+
+.share-article{
+    display: none;
+    background-color: var(--colour-darkgray);
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem; 
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid var(--colour-darkgray);
+   
+}
+
+.icon-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.share-article__text,.share-container__text {
+    display: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3125rem;
+    color: var(--colour-blue);
+    margin-right: 1.3125rem;
+}
+
+
+@media screen and (min-width: 730px) {
+    h3 {
+        line-height: 1.75rem;
+        letter-spacing: 0.01565rem;
+    }
+
+    .article-preview__img {
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+    }
+
+    .article-info {
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+
+
+    .article-preview {
+        flex-direction: row;
+        padding: 0;
+        max-width: 45.625rem;
+        max-height: 17.5rem;
+    }
+
+    .article-preview__img {
+        max-width: 17.8125rem;
+        max-height: 17.5rem;
+    }
+
+    .article-info {
+        padding: 2rem 2.5rem 2rem 2.5rem;
+        max-width: 100%;
+    }
+
+    .article-info__title {
+        font-size: var(--fs-heading);
+    }
+    
+    .article-author {
+        margin-top: 1.25rem;
+    }
+
+    .share-article {
+        border-radius: var(--border-radius);
+        padding-inline: 2.25rem;
+    }
+
+    
+}

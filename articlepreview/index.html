@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | Article preview component</title>
+</head>
+<body>
+  <main>
+    <section class="article-preview" id="article-preview">
+      <img alt="Dressing table" src="./images/drawers.jpg" class="article-preview__img"/>
+      <section class="article-info" id="article-info">
+        <h3 class="article-info__title">Shift the overall look and feel by adding these wonderful 
+          touches to furniture in your home</h3>
+        <p class="article-info__description">  Ever been in a room and felt like something was missing? Perhaps 
+          it felt slightly bare and uninviting. I’ve got some simple tips 
+          to help you make any room feel complete.</p>
+        <div class="article-author" id="article-author">
+          <img alt="Profile picture of Michelle Applpeton" src="./images/avatar-michelle.jpg" class="article-author__img" id="authorimg">
+          <div class="author-details" id="author-details">
+            <h4 class="author-details__name" id="author-name">Michelle Appleton</h4>
+            <p class="author-details__date" id="date">28 Jun 2020</p>
+          </div>
+          <p class="share-article__text" id="share-article__text">SHARE</p>
+          <div class="icon-container" id="icon-container">
+              <img src="./images/icon-facebook.svg" alt="facebook icon" class="share-article__icon">
+              <img src="./images/icon-twitter.svg" alt="Twitter icon" class="share-article__icon">
+              <img src="./images/icon-pinterest.svg" alt="Pinterst icon" class="share-article__icon">
+          </div>
+          <svg class="article-author__sharingicon" id="shareicon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path id='arrow' fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+          
+        </div>
+      </section>
+      <div class="share-container" id="share-container">
+        <div class="share-article" id="share-article">
+          <p class="share-container__text" id="share-container__text">SHARE</p>
+          <div class="icon-container">
+              <img src="./images/icon-facebook.svg" alt="facebook icon" class="share-article__icon">
+              <img src="./images/icon-twitter.svg" alt="Twitter icon" class="share-article__icon">
+              <img src="./images/icon-pinterest.svg" alt="Pinterst icon" class="share-article__icon">
+          </div>
+        </div>
+        <div class="triangle"></div>
+      </div>
+     
+    </section>
+  </main>
+  <script src="index2.js"></script>
+</body>
+</html>
