@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="styles.css"/>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+<body>
+  <main>
+    <article class="newsletter-container" id="newsletter-container">
+      <picture class="newsletter-container__image">
+        <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 912px)"/>
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Newsletter" class="newsletter-container__img"/>
+      </picture>
+      <section class="newsletter">
+        <h1 class="newsletter-form__title">Stay updated!</h1>
+        <p class="newsletter-form__subtitle">Join 60,000+ product managers receiving monthly updates on:</p>
+        <div class="newsletter-form__list">
+          <div class="newsletter-form__listitem">
+            <img src="./assets/images/icon-success.svg" alt="success icon" class="newsletter-form__success">
+            <p>Product discovery and building what matters</p>
+          </div>
+          <div class="newsletter-form__listitem">
+            <img src="./assets/images/icon-success.svg" alt="success icon" class="newsletter-form__success">
+            <p>Measuring to ensure updates are a success</p>
+          </div>
+          <div class="newsletter-form__listitem">
+            <img src="./assets/images/icon-success.svg" alt="success icon" class="newsletter-form__success">
+            <p>And much more!</p>
+          </div>
+        </div>
+        <form class="newsletter-form" id="form" novalidate>
+          <div class="newsletter-form__labels">
+            <label class="newsletter-form__email">Email Address</label>
+            <p class="newsletter-form__emailerror" id="newsletter-form__emailerror"></p>
+          </div>
+          
+          <input id="email" name="email"  class="newsletter-form__input"type="email" placeholder="email@company.com" required/>
+          <button class="newsletter-form__btn">Subscribe to monthly newsletter</button>
+        </form>
+      
+      </section>
+    
+    </article>
+    <section class="success-box" id="success">
+      <div class="success-box__details">
+      <img src="./assets/images/icon-success.svg" alt="success icon" class="success-box__img"> 
+      <h1 class="success-box__heading">Thanks for subscribing!</h1>
+      <p class="success-box__description">A confirmation email has been sent to <span class="success-box__boldtext">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+    </div>
+      <button type="submit" class="success-box__btn" id="dismiss">Dismiss message</button>
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
