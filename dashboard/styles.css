@@ -261,10 +261,16 @@ main {
         padding-top: 1.625rem;
         padding-bottom: 2rem;
         gap: 1.3125rem;
+        margin-top: 0;
     }
 
     .dashboard-menu__listitem {
         font-size: 1.125rem;
+    }
+
+    .dashboard-menu__image {
+        width: 78px;
+        height: 78px;
     }
 
 }
