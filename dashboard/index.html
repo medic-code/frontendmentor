@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles.css"/>
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+<main>
+  <article class="dashboard">
+    <section class="dashboard-menu">
+      <div class="dashboard-menu__topcard">
+        <img src="./images/image-jeremy.png" alt="Jeremy picture" class="dashboard-menu__image"/>
+        <div class="dashboard-menu__details">
+          <p class="dashboard-menu__description">Report for</p>
+          <h2 class="dashboard-menu__name">Jeremy Robson</h2>
+        </div>
+      </div>
+      <ul class="dashboard-menu__list" role="tablist">
+        <li class="dashboard-menu__listitem" id="daily" role="tab">Daily</li>
+        <li class="dashboard-menu__listitem" id="weekly" role="tab">Weekly</li>
+        <li class="dashboard-menu__listitem" id="monthly" role="tab">Monthly</li>
+      </ul>
+     
+    </section>
+    <section class="dashboard-card__work dashboard-card-baseline">
+      <img src="./images/icon-work.svg" alt="work icon" class="dashboard-card__color--icon">
+      <div class="dashboard-card__color"></div>
+      <div class="dashboard-card__details">
+        <div class="dashboard-card__title">
+          <h4 class="dashboard-card__heading">Work</h4>
+          <img src="./images/icon-ellipsis.svg" alt="ellipse icon" class="dashboard__card--icon">
+        </div>
+        <div class="dashboard-card__time" id="work">
+          <h2 class="dashboard-card__hours">32<span>hrs</span></h2>
+          <p class="dashboard-card__lasttime"><span>last week - </span>36<span>hrs</span></p>
+        </div>
+      </div>
+    </section>
+    <section class="dashboard-card__play dashboard-card-baseline">
+      <img src="./images/icon-play.svg" alt="play icon" class="dashboard-card__color--icon">
+      <div class="dashboard-card__color"></div>
+      <div class="dashboard-card__details">
+        <div class="dashboard-card__title">
+          <h4 class="dashboard-card__heading">Play</h4>
+          <img src="./images/icon-ellipsis.svg" alt="ellipse icon" class="dashboard__card--icon">
+        </div>
+        <div class="dashboard-card__time">
+          <h2 class="dashboard-card__hours">10hrs</h2>
+          <p class="dashboard-card__lasttime">Last Week - 8hrs</p>
+        </div>
+      </div>
+    </section> 
+    <section class="dashboard-card__study dashboard-card-baseline">
+      <img src="./images/icon-study.svg" alt="study icon" class="dashboard-card__color--icon">
+      <div class="dashboard-card__color"></div>
+      <div class="dashboard-card__details">
+        <div class="dashboard-card__title">
+          <h4 class="dashboard-card__heading">Study</h4>
+          <img src="./images/icon-ellipsis.svg" alt="ellipse icon" class="dashboard__card--icon">
+        </div>
+        <div class="dashboard-card__time">
+          <h2 class="dashboard-card__hours">4hrs</h2>
+          <p class="dashboard-card__lasttime">Last Week - 7hrs</p>
+        </div>
+      </div>
+    </section>
+    <section class="dashboard-card__exercise dashboard-card-baseline">
+      <img src="./images/icon-exercise.svg" alt="exercise icon" class="dashboard-card__color--icon">
+      <div class="dashboard-card__color"></div>
+      <div class="dashboard-card__details">
+        <div class="dashboard-card__title">
+          <h4 class="dashboard-card__heading">Exercise</h4>
+          <img src="./images/icon-ellipsis.svg" alt="ellipse icon" class="dashboard__card--icon">
+        </div>
+        <div class="dashboard-card__time">
+          <h2 class="dashboard-card__hours">4hrs</h2>
+          <p class="dashboard-card__lasttime">Last Week - 5hrs</p>
+        </div>
+      </div>
+    </section>
+    <section class="dashboard-card__social dashboard-card-baseline">
+      <img src="./images/icon-social.svg" alt="social icon" class="dashboard-card__color--icon">
+      <div class="dashboard-card__color"></div>
+      <div class="dashboard-card__details">
+        <div class="dashboard-card__title">
+          <h4 class="dashboard-card__heading">Social</h4>
+          <img src="./images/icon-ellipsis.svg" alt="ellipse icon" class="dashboard__card--icon">
+        </div>
+        <div class="dashboard-card__time">
+          <h2 class="dashboard-card__hours">5hrs</h2>
+          <p class="dashboard-card__lasttime">Last Week - 10hrs</p>
+        </div>
+      </div>
+    </section>
+    <section class="dashboard-card__selfcare dashboard-card-baseline">
+      <img src="./images/icon-self-care.svg" alt="selfcare icon"class="dashboard-card__color--icon">
+    <div class="dashboard-card__color"></div>
+      <div class="dashboard-card__details">
+        <div class="dashboard-card__title">
+          <h4 class="dashboard-card__heading">Self Care</h4>
+          <img src="./images/icon-ellipsis.svg" alt="ellipse icon" class="dashboard__card--icon">
+        </div>
+        <div class="dashboard-card__time">
+          <h2 class="dashboard-card__hours">2hrs</h2>
+          <p class="dashboard-card__lasttime">Last Week - 2hrs</p>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+<script src="index.js"></script>
+</body>
+</html>
