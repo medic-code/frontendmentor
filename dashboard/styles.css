@@ -148,7 +148,7 @@ main {
 
 .dashboard-card__color--icon {
     position: absolute;
-    top: -10px;
+    top: -5px;
     right: 17px;
     z-index: 1;
 }
@@ -271,6 +271,10 @@ main {
     .dashboard-menu__image {
         width: 78px;
         height: 78px;
+    }
+
+    .dashboard-card__color {
+        height: 2.8125rem;
     }
 
 }
