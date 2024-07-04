@@ -1,0 +1,268 @@
+:root {
+    --color-very-dark-cyan: hsl(183, 100%, 15%);
+    --color-dark-grayish-cyan: hsl(186, 14%, 43%);
+    --color-grayish-cyan: hsl(184, 14%, 56%);
+    --color-light-grayish-cyan: hsl(185, 41%, 84%);
+    --color-very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-input: hsl(185,38%, 97%);
+    --color-custombtn: hsl(180,18%,40%);
+    --color-reset: hsl(172,67%,46%);
+    --color-resultslabel: hsl(183,15%, 56%);
+
+    --fs-inputs: 1.5rem;
+    --fs-labels: 1rem;
+    --fs-person: 0.8125rem;
+
+
+    --border-radius-app: 1.5625rem;
+    --border-radius-results: 0.9375rem;
+    --border-radius-bill: 0.3125rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,button {
+    display: block;
+    font: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Space Mono', sans-serif;
+    font-size: 1rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-light-grayish-cyan);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    margin-top: 3.125rem;
+    margin-bottom: 2.55rem;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-app) var(--border-radius-app) 0 0;
+    padding: 2rem;
+    max-width: 23.4rem;
+}
+.people-section {
+    width: 100%; /* Ensure the container takes full width */
+    max-width: 19.4rem; /* Restrict the maximum width */
+}
+
+.bill-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-style {
+    border: 0;
+    background-color: var(--color-input); 
+    border-radius: var(--border-radius-bill);
+    font-size: var(--fs-inputs);
+    padding-top: 0.39rem;
+    padding-bottom: 0.390625rem;
+    padding-inline: 1.125rem;
+    font-weight: 700;
+    color: var(--color-very-dark-cyan);
+    text-align: right;
+}
+
+.billAmount {
+    background-image: url('./images/icon-dollar.svg');
+    background-position: left; 
+    background-repeat: no-repeat;
+ 
+
+}
+
+.num-people {
+    background-image: url('./images/icon-person.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.bill-label {
+    margin-bottom: 0.375rem;
+    font-weight: 600;
+    color: var(--color-dark-grayish-cyan);
+}
+
+.bill-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tip-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-list {
+    display:flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tip-btn {
+    padding: 0.39rem 0;
+    border: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: var(--color-very-dark-cyan);
+    color: var(--color-white);
+    text-align: center;
+    border-radius: var(--border-radius-bill);
+    font-weight: 550;
+    max-width: 9.125rem;
+    width: 146px;
+}
+
+.custom {
+    background-color: var(--color-input);
+    color: var(--color-custombtn);
+    font-weight: 550;
+}
+
+#custom-input {
+    display: none;
+}
+
+#custom-input:focus {
+    border: 1px solid var(--color-reset);
+}
+
+.tipresults-description {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tipresults-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background-color: var(--color-very-dark-cyan);
+    padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+    border-radius: var(--border-radius-results);
+}
+.people-section {
+    width: 19.4rem;
+}
+.reset-btn {
+    padding: 0.39rem 0;
+    border: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--color-reset);
+    color: var(--color-very-dark-cyan);
+    text-align: center;
+    border-radius: var(--border-radius-bill);
+}
+
+.tip-label__amount,.totalamount__label {
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+.tip-amount, .totalamount-dollars {
+    display: flex;
+    justify-content: space-between;
+}
+.tipamount-dollars {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.67px;
+    color: var(--color-reset);
+}
+
+.total-amount {
+    font-size: 2rem;
+    letter-spacing: -0.67px;
+    color: var(--color-reset);
+}
+
+.totalamount__persons, .tip-label__persons{
+    font-size: var(--fs-person);
+    color: var(--color-resultslabel);
+    font-weight: 600;
+}
+
+.validation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.numError {
+    font-size: 1rem;
+    color: hsl(13,70%,60%);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 920px) {
+    .app-container {
+        flex-direction: row;
+        max-width: 920px;
+        padding: 0;
+    }
+
+    .bill-container {
+        padding: 3rem 0 3rem 3rem;
+        max-width: 411px; 
+    }
+
+    .tipresults-container {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+        width: 413px;
+    }
+
+    .button-list {
+        gap: 0.875rem;
+    }
+
+    .tip-btn {
+     width: 117px; 
+    }
+
+    .reset-btn {
+        margin-top: auto;
+    }
+    .bill-container {
+        max-width: 26.7rem;
+    }
+
+    .tip-section {
+        max-width: 23.69rem;
+    }
+    .people-section {
+        max-width: 23.7rem;
+    }
+}
