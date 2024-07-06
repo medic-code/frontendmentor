@@ -1,11 +1,11 @@
 :root {
-    --color-red: hsl(0,90%,63%);
-    --color-orange: hsl(13,96%, 67%);
-    --color-yellow: hsl(42,91%,69%);
+    --color-red: hsl(0,91%,63%);
+    --color-orange: hsl(13,95%, 66%);
+    --color-yellow: hsl(42,91%,68%);
     --color-green: hsl(127, 100%, 82%);
     --color-white: hsl(252,11%,91%);
-    --color-grey: hsl(252,9%, 53%);
-    --color-darkgrey: hsl(247,11%,15%);
+    --color-grey: hsl(251,9%, 53%);
+    --color-darkgrey: hsl(248,10%,15%);
     --color-verydarkgrey: hsl(248, 15%,11%);
 
     --fs-heading-large: 2rem;
@@ -232,6 +232,9 @@ p,li {
     }
    .password-gen__pw {
     min-width: 33.75rem;
+    padding-inline: 2rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
    }
     .password-gen__pw--password {
         font-size: var(--fs-heading-large);
@@ -253,6 +256,7 @@ p,li {
 }
 .password-gen-settings {
     padding: 2rem;
+    gap: 2rem;
 }
 .password-gen-settings__description {
     font-size: var(--fs-body);
@@ -268,5 +272,16 @@ p,li {
 .password-gen__button--arrow {
     margin-left: 1.5rem;
 }
+.password-gen__button, .password-gen-settings__strength {
+    padding-top: 1.3125rem;
+    padding-bottom: 1.3125rem;
+}
+.password-gen-settings__strength {
+    padding-inline: 2rem;
+}
+.password-gen-settings__list  {
+    gap: 1.25rem;
+}
+
 }
 
