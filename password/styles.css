@@ -45,6 +45,7 @@ p,li {
 .password-gen-settings__charlength--length {
     color: var(--color-green);
     margin-left: auto;
+    font-size: var(--fs-heading-med)
 }
 
 .title {
@@ -111,10 +112,6 @@ p,li {
     display: flex; 
     justify-content: flex-start;
     align-items: center;
-}
-
-.password-gen-settings__charlength--length {
-    font-size: var(--fs-heading-med)
 }
 
 .password-gen-settings-char {
@@ -240,8 +237,8 @@ p,li {
         font-size: var(--fs-heading-large);
     }
    .password-gen__pw--image {
-     width: 21px;
-     height: 24px;
+     width: 1.3125rem;
+     height: 1.5rem;
    }
 
   .password-gen-settings {

@@ -8,7 +8,8 @@ const charLength = document.getElementById('charlength');
 const checkBoxes = document.getElementsByClassName('password-gen-settings__check')
 const bars = document.getElementById('bars');
 
-console.log(checkBoxes);
+charlength.textContent = slider.value 
+
 function generatePasswordChar(checked) {
     const randomChecked = Math.floor(Math.random()*checked.length);
     let passwordChars = {
@@ -33,17 +34,12 @@ function passwordGenerate(pwlen,checked) {
   return password; 
 }
 
-for (let i = 0; i < checkBoxes.length; i++) {
-    checkBoxes[i].addEventListener('click', () => {
-        checkBoxes[i].style.background = "url('./assets/images/icon-check.svg') no-repeat center, var(--color-green)"
-        if (!checkBoxes[i].checked) {
-         checkBoxes[i].style.background = '';
-        }
-    })
-
-}
-  
-charlength.textContent = slider.value 
+const checkBoxContainer = document.querySelector('.password-gen-settings__list');
+checkBoxContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('password-gen-settings__check')) {
+        event.target.style.background = event.target.checked ? "url('./assets/images/icon-check.svg') no-repeat center, var(--color-green)" : '';
+    }
+});
 
 copyicon.addEventListener('click',() => {
     navigator.clipboard.writeText(password.textContent).then(function () {
@@ -61,11 +57,7 @@ slider.addEventListener('input',() => {
 
 button.addEventListener('click', (event) => {
     event.preventDefault();
-    const upperChecked = document.getElementById('uppercase').checked ? 'uppercase' : '';
-    const lowerChecked = document.getElementById('lowercase').checked ? 'lowercase' :'';
-    const numChecked = document.getElementById('numbers').checked ? 'numbers' : '';
-    const symbolChecked = document.getElementById('symbols').checked ? 'symbols' : '';
-    const checkedArr = [upperChecked, lowerChecked, numChecked, symbolChecked].filter((elem) => elem);
+    const checkedArr = ['uppercase', 'lowercase', 'numbers', 'symbols'].filter((id) => document.getElementById(id).checked);
     const category = document.getElementById('category');
 
     switch(checkedArr.length) {
