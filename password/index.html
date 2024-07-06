@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css"/><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+<body>
+  <main>
+      <h3 class="title">Password Generator</h3>
+      <article class="password-gen">
+        <div class="password-gen__pw">
+          <h2 class="password-gen__pw--password" id="password" aria-live="polite">P4$5W0rD!</h2>
+          <div class="password-gen__pw--copy">
+            <p class="password-gen__pw--copytext" id="copied">COPIED</p>
+            <img alt="Copy generated password to clipboard icon" src="./assets/images/icon-copy.svg" id="copy" class="password-gen__pw--image">
+        </div>
+        </div>
+        <form class="password-gen-settings">
+          <div class="password-gen-settings-char">
+            <div class="password-gen-settings__charlength">
+              <p class="password-gen-settings__charlength--title">Character Length</p>
+              <h3 class="password-gen-settings__charlength--length" id="charlength" aria-live="polite"></h3>
+            </div>
+            <input class="password-gen-settings__slider" type="range" min="8" max="30" value="10" id="slider">
+          </div>
+        
+          <div class="password-gen-settings__radio">
+            <ul class="password-gen-settings__list">
+              <li class="password-gen-settings__listitem">
+                <label for="uppercase" class="password-gen-settings__description">
+                  <input type="checkbox" id="uppercase" class="password-gen-settings__check">
+                    Include Uppercase Letters
+                </label>
+              </li>
+              <li class="password-gen-settings__listitem">
+                <label for="lowercase" class="password-gen-settings__description">
+                  <input type="checkbox" id="lowercase" class="password-gen-settings__check">
+                    Include Lowercase Letters
+                </label>
+              </li>
+              <li class="password-gen-settings__listitem">
+                <label for="numbers" class="password-gen-settings__description">
+                  <input type="checkbox" id="numbers"class="password-gen-settings__check">
+                    Include Numbers
+                </label>
+              </li>
+              <li class="password-gen-settings__listitem">
+                <label for="symbols" class="password-gen-settings__description">
+                  <input type="checkbox" id="symbols" class="password-gen-settings__check">
+                    Include Symbols
+                </label>
+              </li>
+            </ul>
+         
+          </div>
+          <div class="password-gen-settings__strength">
+            <p class="password-gen-settings__strength--title">STRENGTH</p>
+            <div class="password-gen-settings__strength--indic">
+              <p class="password-gen-settings__strength--category" id="category" aria-live="polite"></p>
+              <div class="password-gen-settings__strength--bars" id="bars">
+                <div class="password-gen-settings__strength--bar" id="bar1"></div>
+                <div class="password-gen-settings__strength--bar" id="bar2"></div>
+                <div class="password-gen-settings__strength--bar" id="bar3"></div>
+                <div class="password-gen-settings__strength--bar" id="bar4"></div>
+              </div>
+            </div>
+          </div>   
+          <button type="submit" class="password-gen__button" id="submit">GENERATE <svg class="password-gen__button--arrow "width="12" height="12" xmlns="http://www.w3.org/2000/svg"><path fill="#24232C" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/></svg></button>
+        </form>
+      </article>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>

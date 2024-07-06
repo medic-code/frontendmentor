@@ -1,0 +1,275 @@
+:root {
+    --color-red: hsl(0,90%,63%);
+    --color-orange: hsl(13,96%, 67%);
+    --color-yellow: hsl(42,91%,69%);
+    --color-green: hsl(127, 100%, 82%);
+    --color-white: hsl(252,11%,91%);
+    --color-grey: hsl(252,9%, 53%);
+    --color-darkgrey: hsl(247,11%,15%);
+    --color-verydarkgrey: hsl(248, 15%,11%);
+
+    --fs-heading-large: 2rem;
+    --fs-heading-med: 1.5rem;
+    --fs-body: 1.125rem;
+
+    --ff: "JetBrains Mono", monospace;
+}
+
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff);
+    background-color: var(--color-verydarkgrey);
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+p,li { 
+    color: var(--color-white);
+}
+
+.password-gen-settings__charlength--length {
+    color: var(--color-green);
+    margin-left: auto;
+}
+
+.title {
+    color: var(--color-grey);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.password-gen {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    min-width: 21.4rem;
+    align-items:center;
+}
+
+.password-gen__pw {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    min-width: 21.4rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-darkgrey);
+}
+
+.password-gen__pw--password {
+    color: var(--color-grey);
+    margin-right: auto;
+    font-size: var(--fs-heading-med);
+}
+
+.password-gen__pw--copied {
+    color: var(--color-white);
+
+}
+
+.password-gen__pw--copy {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.password-gen__pw--image {
+    height: 1.25rem;
+}
+
+.password-gen__pw--copytext {
+    display: none;
+    color: var(--color-green);
+    font-size: var(--fs-body);
+}
+
+.password-gen-settings {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-darkgrey);
+    gap: 2rem;
+    min-width: 21.4rem;
+    padding: 1rem;
+}
+.password-gen-settings__charlength {
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.password-gen-settings__charlength--length {
+    font-size: var(--fs-heading-med)
+}
+
+.password-gen-settings-char {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+
+}
+
+.password-gen-settings__slider {
+    appearance: none;
+    background-color: var(--color-green);
+    height: 0.5rem;
+}
+
+.password-gen-settings__slider::-webkit-slider-thumb {
+    appearance: none;
+    border-radius: 50%;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: var(--color-white);
+}
+.password-gen-settings__slider::-webkit-slider-thumb:hover {
+    background-color: var(--color-verydarkgrey);
+    border: 1px solid var(--color-green);
+}
+.password-gen-settings__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.password-gen-settings__description {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+
+.password-gen-settings__listitem {
+    list-style-type: none;
+}
+
+.password-gen-settings__check {
+    appearance: none;
+    border: 2px solid var(--color-white);
+    width: 1.25rem;
+    height: 1.25rem;
+
+}
+
+.password-gen-settings__strength {
+    background-color: var(--color-verydarkgrey);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-gen-settings__strength--title {
+    font-size: 1rem;
+}
+
+.password-gen-settings__strength--category {
+    font-size: var(--fs-body);
+}
+
+.password-gen-settings__strength--indic {
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+}
+
+.password-gen-settings__strength--bars {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.password-gen-settings__strength--bar {
+    border: 2px solid var(--color-white);
+    width: 0.625rem;
+    height: 1.75rem;
+}
+
+.password-gen__button {
+    border:1px solid var(--color-green);
+    cursor: pointer;
+    background-color: var(--color-green);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.password-gen__button:hover {
+    background-color: var(--color-verydarkgrey);
+    color: var(--color-green);
+}
+
+.password-gen__button:hover svg path {
+    fill: var(--color-green);
+}
+
+.password-gen__button--arrow {
+    margin-left: 1rem;
+}
+
+@media screen and (min-width: 540px) {
+    .password-gen {
+        min-width: 33.75rem;
+        
+
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+   .password-gen__pw {
+    min-width: 33.75rem;
+   }
+    .password-gen__pw--password {
+        font-size: var(--fs-heading-large);
+    }
+   .password-gen__pw--image {
+     width: 21px;
+     height: 24px;
+   }
+
+  .password-gen-settings {
+    min-width: 33.75rem;
+  } 
+   .password-gen-settings__charlength--title {
+    font-size: var(--fs-body);
+   }
+
+   .password-gen-settings__charlength--length {
+    font-size: var(--fs-heading-large)
+}
+.password-gen-settings {
+    padding: 2rem;
+}
+.password-gen-settings__description {
+    font-size: var(--fs-body);
+    gap: 1.5rem;
+}
+
+.password-gen-settings__strength--title {
+    font-size: var(--fs-body);
+}
+.password-gen-settings__strength--category {
+    font-size: var(--fs-heading-med);
+}
+.password-gen__button--arrow {
+    margin-left: 1.5rem;
+}
+}
+
