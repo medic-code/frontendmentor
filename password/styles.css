@@ -173,6 +173,7 @@ p,li {
 
 .password-gen-settings__strength--title {
     font-size: 1rem;
+    color: var(--color-grey);
 }
 
 .password-gen-settings__strength--category {
@@ -257,6 +258,7 @@ p,li {
 }
 .password-gen-settings {
     padding: 2rem;
+    padding-top: 1.5rem;
     gap: 2rem;
 }
 .password-gen-settings__description {

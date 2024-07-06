@@ -93,6 +93,7 @@ button.addEventListener('click', (event) => {
     } else {
         password.textContent = passwordGenerate(slider.value,checkedArr);
         password.style.color = 'var(--color-white)';
+        
     }
    
 })
