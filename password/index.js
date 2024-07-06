@@ -63,7 +63,6 @@ slider.addEventListener('input',() => {
 
 function updateSliderColour() {
     const value = (slider.value - slider.min)*100 / 30
-    console.log(value);
     slider.style.background = `linear-gradient(to right, var(--color-green) 0%, var(--color-green) ${value}%, var(--color-verydarkgrey) ${value}%, var(--color-verydarkgrey) 100% )`
 }
 
