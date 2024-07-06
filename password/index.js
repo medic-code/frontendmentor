@@ -9,6 +9,11 @@ const checkBoxes = document.getElementsByClassName('password-gen-settings__check
 const bars = document.getElementById('bars');
 
 charlength.textContent = slider.value 
+if (slider.value === slider.min) {
+    slider.style.backgroundColor = 'var(--color-verydarkgrey';
+} else {
+    slider.style.backgroundColor = 'var(--color-green)'
+}
 
 function generatePasswordChar(checked) {
     const randomChecked = Math.floor(Math.random()*checked.length);
@@ -53,7 +58,14 @@ copyicon.addEventListener('click',() => {
 
 slider.addEventListener('input',() => {
     charLength.textContent = slider.value;
+    updateSliderColour();
 })
+
+function updateSliderColour() {
+    const value = (slider.value - slider.min)*100 / 30
+    console.log(value);
+    slider.style.background = `linear-gradient(to right, var(--color-green) 0%, var(--color-green) ${value}%, var(--color-verydarkgrey) ${value}%, var(--color-verydarkgrey) 100% )`
+}
 
 button.addEventListener('click', (event) => {
     event.preventDefault();
